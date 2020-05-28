@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html data-semplice="4.4.0"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>Experiments – Julien Lozingue</title><link rel="dns-prefetch" href="//s.w.org"><link rel="stylesheet" id="wp-block-library-css" href="https://julienlozingue.com/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all"><link rel="stylesheet" id="semplice-stylesheet-css" href="https://julienlozingue.com/wp-content/themes/theme_repo/julienwz.github.io/style.css" type="text/css" media="all"><link rel="stylesheet" id="semplice-frontend-stylesheet-css" href="https://julienlozingue.com/wp-content/themes/theme_repo/julienwz.github.io/assets/css/frontend.min.css" type="text/css" media="all"><link rel="stylesheet" id="mediaelement-css" href="https://julienlozingue.com/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css" type="text/css" media="all"><script type="text/javascript" src="https://julienlozingue.com/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://julienlozingue.com/wp-includes/js/jquery/jquery-migrate.min.js"></script><script type="text/javascript">
+var mejsL10n = {"language":"fr","strings":{"mejs.install-flash":"Vous utilisez un navigateur qui n\u2019a pas le lecteur Flash activ\u00e9 ou install\u00e9. Veuillez activer votre extension Flash ou t\u00e9l\u00e9charger la derni\u00e8re version \u00e0 partir de cette adresse\u00a0: https:\/\/get.adobe.com\/flashplayer\/","mejs.fullscreen-off":"Quitter le plein \u00e9cran","mejs.fullscreen-on":"Passer en plein \u00e9cran","mejs.download-video":"T\u00e9l\u00e9charger la vid\u00e9o","mejs.fullscreen":"Plein \u00e9cran","mejs.time-jump-forward":["Saut en avant d\u20191 seconde","Avancer de %1 secondes"],"mejs.loop":"Lire en boucle","mejs.play":"Lecture","mejs.pause":"Pause","mejs.close":"Fermer","mejs.time-slider":"Curseur de temps","mejs.time-help-text":"Utilisez les fl\u00e8ches droite\/gauche pour avancer d\u2019une seconde, haut\/bas pour avancer de dix secondes.","mejs.time-skip-back":["Revenir une seconde en arri\u00e8re","Saut en arri\u00e8re de %1 seconde(s)"],"mejs.captions-subtitles":"L\u00e9gendes\/Sous-titres","mejs.captions-chapters":"Chapitres","mejs.none":"Aucun","mejs.mute-toggle":"Couper le son","mejs.volume-help-text":"Utilisez les fl\u00e8ches haut\/bas pour augmenter ou diminuer le volume.","mejs.unmute":"R\u00e9activer le son","mejs.mute":"Muet","mejs.volume-slider":"Curseur de volume","mejs.video-player":"Lecteur vid\u00e9o","mejs.audio-player":"Lecteur audio","mejs.ad-skip":"Passer la publicit\u00e9","mejs.ad-skip-info":["Passer dans %1 seconde","Passer dans %1 secondes"],"mejs.source-chooser":"S\u00e9lecteur de source","mejs.stop":"Arr\u00eater","mejs.speed-rate":"Taux de vitesse","mejs.live-broadcast":"\u00c9mission en direct","mejs.afrikaans":"Afrikaans","mejs.albanian":"Albanais","mejs.arabic":"Arabe","mejs.belarusian":"Bi\u00e9lorusse","mejs.bulgarian":"Bulgare","mejs.catalan":"Catalan","mejs.chinese":"Chinois","mejs.chinese-simplified":"Chinois (simplifi\u00e9)","mejs.chinese-traditional":"Chinois (traditionnel)","mejs.croatian":"Croate","mejs.czech":"Tch\u00e8que","mejs.danish":"Danois","mejs.dutch":"N\u00e9erlandais","mejs.english":"Anglais","mejs.estonian":"Estonien","mejs.filipino":"Filipino","mejs.finnish":"Terminer","mejs.french":"Fran\u00e7ais","mejs.galician":"Galicien","mejs.german":"Allemand","mejs.greek":"Grec","mejs.haitian-creole":"Cr\u00e9ole ha\u00eftien","mejs.hebrew":"H\u00e9breu","mejs.hindi":"Hindi","mejs.hungarian":"Hongrois","mejs.icelandic":"Islandais","mejs.indonesian":"Indon\u00e9sien","mejs.irish":"Irlandais","mejs.italian":"Italien","mejs.japanese":"Japonais","mejs.korean":"Cor\u00e9en","mejs.latvian":"Letton","mejs.lithuanian":"Lituanien","mejs.macedonian":"Mac\u00e9donien","mejs.malay":"Malais","mejs.maltese":"Maltais","mejs.norwegian":"Norv\u00e9gien","mejs.persian":"Perse","mejs.polish":"Polonais","mejs.portuguese":"Portugais","mejs.romanian":"Roumain","mejs.russian":"Russe","mejs.serbian":"Serbe","mejs.slovak":"Slovaque","mejs.slovenian":"Slov\u00e9nien","mejs.spanish":"Espagnol","mejs.swahili":"Swahili","mejs.swedish":"Su\u00e9dois","mejs.tagalog":"Tagalog","mejs.thai":"Thai","mejs.turkish":"Turc","mejs.ukrainian":"Ukrainien","mejs.vietnamese":"Vietnamien","mejs.welsh":"Ga\u00e9lique","mejs.yiddish":"Yiddish"}};
+</script><script type="text/javascript" src="https://julienlozingue.com/wp-includes/js/mediaelement/mediaelement-and-player.min.js"></script><script type="text/javascript" src="https://julienlozingue.com/wp-includes/js/mediaelement/mediaelement-migrate.min.js"></script><script type="text/javascript">
+/* <![CDATA[ */
+var _wpmejsSettings = {"pluginPath":"\/wordpress\/wp-includes\/js\/mediaelement\/","classPrefix":"mejs-","stretching":"responsive"};
+/* ]]> */
+</script><style type="text/css" id="semplice-webfonts-selfhosted">@font-face {
+    font-family: 'Neue Haas Unica Pro Bold';
+    src: url('https://julienlozingue.com/wp-content/uploads/2019/07/NeueHaasUnicaPro-Bold.eot'); /* IE9 Compat Modes */
+    src: url('https://julienlozingue.com/wp-content/uploads/2019/07/NeueHaasUnicaPro-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('https://julienlozingue.com/wp-content/uploads/2019/07/NeueHaasUnicaPro-Bold.woff2') format('woff2'), /* Modern Browsers */
+        url('https://julienlozingue.com/wp-content/uploads/2019/07/NeueHaasUnicaPro-Bold.woff') format('woff'), /* Modern Browsers */
+        url('https://julienlozingue.com/wp-content/uploads/2019/07/NeueHaasUnicaPro-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('https://julienlozingue.com/wp-content/uploads/2019/07/NeueHaasUnicaPro-Bold.svg') format('svg'); /* Legacy iOS */
+    font-weight: bold;
+}@font-face {
+    font-family: 'Neue Haas Unica Pro Italic';
+    src: url('https://julienlozingue.com/wp-content/uploads/2019/07/NeueHaasUnicaPro-Italic.eot'); /* IE9 Compat Modes */
+    src: url('https://julienlozingue.com/wp-content/uploads/2019/07/NeueHaasUnicaPro-Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('https://julienlozingue.com/wp-content/uploads/2019/07/NeueHaasUnicaPro-Italic.woff2') format('woff2'), /* Modern Browsers */
+        url('https://julienlozingue.com/wp-content/uploads/2019/07/NeueHaasUnicaPro-Italic.woff') format('woff'), /* Modern Browsers */
+        url('https://julienlozingue.com/wp-content/uploads/2019/07/NeueHaasUnicaPro-Italic.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('https://julienlozingue.com/wp-content/uploads/2019/07/NeueHaasUnicaPro-Italic.svg') format('svg'); /* Legacy iOS */
+    font-weight: normal;
+    font-style: normal;
+}@font-face {
+    font-family: 'Neue Haas Unica Pro Light';
+    src: url('https://julienlozingue.com/wp-content/uploads/2019/07/NeueHaasUnicaPro-Light.eot'); /* IE9 Compat Modes */
+    src: url('https://julienlozingue.com/wp-content/uploads/2019/07/NeueHaasUnicaPro-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('https://julienlozingue.com/wp-content/uploads/2019/07/NeueHaasUnicaPro-Light.woff2') format('woff2'), /* Modern Browsers */
+        url('https://julienlozingue.com/wp-content/uploads/2019/07/NeueHaasUnicaPro-Light.woff') format('woff'), /* Modern Browsers */
+        url('https://julienlozingue.com/wp-content/uploads/2019/07/NeueHaasUnicaPro-Light.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('https://julienlozingue.com/wp-content/uploads/2019/07/NeueHaasUnicaPro-Light.svg') format('svg'); /* Legacy iOS */
+    font-weight: light;
+}@font-face {
+    font-family: 'Neue Haas Unica Pro Mediumlt';
+    src: url('https://julienlozingue.com/wp-content/uploads/2019/07/NeueHaasUnicaPro-MediumIt.eot'); /* IE9 Compat Modes */
+    src: url('https://julienlozingue.com/wp-content/uploads/2019/07/NeueHaasUnicaPro-MediumIt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('https://julienlozingue.com/wp-content/uploads/2019/07/NeueHaasUnicaPro-MediumIt.woff2') format('woff2'), /* Modern Browsers */
+        url('https://julienlozingue.com/wp-content/uploads/2019/07/NeueHaasUnicaPro-MediumIt.woff') format('woff'), /* Modern Browsers */
+        url('https://julienlozingue.com/wp-content/uploads/2019/07/NeueHaasUnicaPro-MediumIt.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('https://julienlozingue.com/wp-content/uploads/2019/07/NeueHaasUnicaPro-MediumIt.svg') format('svg'); /* Legacy iOS */
+    font-weight: medium;
+}@font-face {
+    font-family: 'Neue Haas Unica Pro Regular';
+    src: url('https://julienlozingue.com/wp-content/uploads/2019/07/NeueHaasUnicaPro-Regular.eot'); /* IE9 Compat Modes */
+    src: url('https://julienlozingue.com/wp-content/uploads/2019/07/NeueHaasUnicaPro-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('https://julienlozingue.com/wp-content/uploads/2019/07/NeueHaasUnicaPro-Regular.woff2') format('woff2'), /* Modern Browsers */
+        url('https://julienlozingue.com/wp-content/uploads/2019/07/NeueHaasUnicaPro-Regular.woff') format('woff'), /* Modern Browsers */
+        url('https://julienlozingue.com/wp-content/uploads/2019/07/NeueHaasUnicaPro-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('https://julienlozingue.com/wp-content/uploads/2019/07/NeueHaasUnicaPro-Regular.svg') format('svg'); /* Legacy iOS */
+    font-weight: normal;
+    font-style: normal;
+}</style><style type="text/css" id="semplice-webfonts-css">.font_f28xx9l3t, [data-font="font_f28xx9l3t"], [data-font="font_f28xx9l3t"] li a {font-family: "neuehaas-bold", sans-serif;font-weight: 700;font-style: normal;}.font_3jzvb0zp1, [data-font="font_3jzvb0zp1"], [data-font="font_3jzvb0zp1"] li a {font-family: "neuehaas-italic", sans-serif;font-weight: normal;font-style: italic;}.font_n1irzbpl7, [data-font="font_n1irzbpl7"], [data-font="font_n1irzbpl7"] li a {font-family: "neuehaas-light", sans-serif;font-weight: 100;font-style: normal;}.font_pshyo2fw2, [data-font="font_pshyo2fw2"], [data-font="font_pshyo2fw2"] li a {font-family: "neuehaas-medium", sans-serif;font-weight: 600;font-style: normal;}.font_qkcpimpel, [data-font="font_qkcpimpel"], [data-font="font_qkcpimpel"] li a {font-family: "neuehaas-regular", sans-serif;font-weight: normal;font-style: normal;}</style><style type="text/css" id="semplice-custom-css">
+			
+				@media screen and (min-width: 1170px) {
+					.container-fluid, .container, .admin-container {
+						padding: 0 1.11111rem 0 1.11111rem;
+					}
+				}
+			.container {
+			max-width: 1480px;
+		}@media screen and (max-width: 1169px) { .row {
+			margin-left: -10px;
+			margin-right: -10px;
+		}.column, .grid-column {
+			padding-left: 10px;
+			padding-right: 10px;
+		}}@media screen and (min-width: 1170px) { .row {
+			margin-left: -10px;
+			margin-right: -10px;
+		}.column, .grid-column {
+			padding-left: 10px;
+			padding-right: 10px;
+		}}
+			@media screen and (min-width: 992px) and (max-width: 1169px) { #content-holder h1 { font-size: 2.15rem; line-height: 2.76rem; }#content-holder h2 { font-size: 1.84rem; line-height: 2.45rem; }#content-holder h3 { font-size: 1.49rem; line-height: 1.92rem; }#content-holder h4 { font-size: 1.28rem; line-height: 1.92rem; }#content-holder h5 { font-size: 1.11rem; line-height: 1.78rem; }#content-holder h6 { font-size: 1rem; line-height: 1.67rem; }}@media screen and (min-width: 768px) and (max-width: 991px) { #content-holder h1 { font-size: 2.01rem; line-height: 2.58rem; }#content-holder h2 { font-size: 1.76rem; line-height: 2.35rem; }#content-holder h3 { font-size: 1.43rem; line-height: 1.84rem; }#content-holder h4 { font-size: 1.23rem; line-height: 1.84rem; }#content-holder h5 { font-size: 1.11rem; line-height: 1.78rem; }#content-holder h6 { font-size: 1rem; line-height: 1.67rem; }}@media screen and (min-width: 544px) and (max-width: 767px) { #content-holder h1 { font-size: 1.91rem; line-height: 2.46rem; }#content-holder h2 { font-size: 1.68rem; line-height: 2.24rem; }#content-holder h3 { font-size: 1.4rem; line-height: 1.8rem; }#content-holder h4 { font-size: 1.2rem; line-height: 1.8rem; }#content-holder h5 { font-size: 1.11rem; line-height: 1.78rem; }#content-holder h6 { font-size: 1rem; line-height: 1.67rem; }}@media screen and (max-width: 543px) { #content-holder h1 { font-size: 1.82rem; line-height: 2.34rem; }#content-holder h2 { font-size: 1.6rem; line-height: 2.13rem; }#content-holder h3 { font-size: 1.37rem; line-height: 1.76rem; }#content-holder h4 { font-size: 1.17rem; line-height: 1.76rem; }#content-holder h5 { font-size: 1.11rem; line-height: 1.78rem; }#content-holder h6 { font-size: 1rem; line-height: 1.67rem; }}
+			
+			
+		.project-panel {
+			background: #f5f5f5;
+			padding: 2.5rem 0rem;
+		}
+		.pp-thumbs {
+			margin-bottom: -1.666666666666667rem;
+		}
+		#content-holder .panel-label, .projectpanel-preview .panel-label {
+			color: #000000;
+			font-size: 1.777777777777778rem;
+			text-transform: none;
+			padding-left: 0rem;
+			padding-bottom: 1.666666666666667rem;
+			text-align: left;
+			line-height: 1;
+		}
+		.project-panel .pp-title {
+			padding: 0.5555555555555556rem 0rem 1.666666666666667rem 0rem;
+		}
+		.project-panel .pp-title a {
+			color: #000000; 
+			font-size: 0.7222222222222222rem; 
+			text-transform: none;
+		} 
+		.project-panel .pp-title span {
+			color: #999999;
+			font-size: 0.7222222222222222rem;
+			text-transform: none;
+		}
+	
+			.is-content { color: #ffffff; }a { color: #ffffff; }a:hover { color: #ff6666; }
+		</style><style type="text/css" id="136-post-css">
+			#content-136 #section_e3409183a {}#content-136 #column_ec4ea40b4 {background-image: url(https://julienlozingue.com/wp-content/uploads/2019/07/logo.png);background-repeat: no-repeat;background-position: 100% 50%;background-attachment: scroll;}#content-136 #content_27a148cb1 {margin-top: 13.88888888888889rem;}#content-136 #content_27a148cb1 .is-content {}#content-136 #content_c250c3355 {margin-top: 0rem;}#content-136 #content_c250c3355 .is-content {}@media screen and (max-width: 543.9px) { #content-136 #content_c250c3355 {margin-top: 1.1111111111111112rem;}#content-136 #content_c250c3355 .is-content {}}#content-136 #section_z3n0gguwd {margin-top: 5.555555555555555rem;}@media screen and (max-width: 543.9px) { #content-136 #content_v6lrfjehf {margin-bottom: 1.1111111111111112rem;}#content-136 #content_v6lrfjehf .is-content {}}@media screen and (max-width: 543.9px) { #content-136 #content_nfziza8ch {margin-bottom: 1.1111111111111112rem;}#content-136 #content_nfziza8ch .is-content {}}#content-136 #content_qybf9u3s1 {margin-top: 0rem;}#content-136 #content_qybf9u3s1 .is-content {}@media screen and (max-width: 543.9px) { #content-136 #content_qybf9u3s1 {margin-bottom: 1.1111111111111112rem;}#content-136 #content_qybf9u3s1 .is-content {}}#content-136 #section_y1nz0u5mh {margin-top: 1.1111111111111112rem;}@media screen and (max-width: 543.9px) { #content-136 #content_psw720fbd {margin-bottom: 1.1111111111111112rem;}#content-136 #content_psw720fbd .is-content {}}#content-136 #section_fl7yyepla {margin-top: 1.1111111111111112rem;}@media screen and (max-width: 543.9px) { #content-136 #content_pkdnyyypi {margin-bottom: 1.1111111111111112rem;}#content-136 #content_pkdnyyypi .is-content {}}@media screen and (max-width: 543.9px) { #content-136 #content_pa3kucnu0 {margin-bottom: 1.1111111111111112rem;}#content-136 #content_pa3kucnu0 .is-content {}}@media screen and (max-width: 543.9px) { #content-136 #content_v3720eg00 {margin-bottom: 1.1111111111111112rem;}#content-136 #content_v3720eg00 .is-content {}}#content-136 #section_a1njnyx6i {margin-top: 1.1111111111111112rem;}@media screen and (max-width: 543.9px) { #content-136 #content_m4n4ppzid {margin-bottom: 1.1111111111111112rem;}#content-136 #content_m4n4ppzid .is-content {}}@media screen and (max-width: 543.9px) { #content-136 #content_nsak5ntuu {margin-bottom: 1.1111111111111112rem;}#content-136 #content_nsak5ntuu .is-content {}}#content-136 #section_8irkqk2wg {margin-top: 1.1111111111111112rem;}@media screen and (max-width: 543.9px) { #content-136 #content_d7uiyg5y4 {margin-bottom: 1.1111111111111112rem;}#content-136 #content_d7uiyg5y4 .is-content {}}#content-136 #section_luncqbe5u {margin-top: 1.1111111111111112rem;}@media screen and (max-width: 543.9px) { #content-136 #content_wqky92022 {margin-bottom: 1.1111111111111112rem;}#content-136 #content_wqky92022 .is-content {}}#content-136 #section_40y5hl0fj {margin-top: 1.1111111111111112rem;}@media screen and (max-width: 543.9px) { #content-136 #content_zcww3ativ {margin-bottom: 1.1111111111111112rem;}#content-136 #content_zcww3ativ .is-content {}}#content-136 #section_qh4qnpr0j {margin-top: 1.1111111111111112rem;}@media screen and (max-width: 543.9px) { #content-136 #content_od8ojr98l {margin-bottom: 1.1111111111111112rem;}#content-136 #content_od8ojr98l .is-content {}}@media screen and (max-width: 543.9px) { #content-136 #content_yynom51l5 {margin-bottom: 1.1111111111111112rem;}#content-136 #content_yynom51l5 .is-content {}}#content-136 #section_h04bn3gn2 {margin-top: 1.1111111111111112rem;}@media screen and (max-width: 543.9px) { #content-136 #content_e2stlyboy {margin-bottom: 1.1111111111111112rem;}#content-136 #content_e2stlyboy .is-content {}}#content-136 #section_9jymfav9v {margin-top: 1.1111111111111112rem;}@media screen and (max-width: 543.9px) { #content-136 #content_buqx3k8bb {margin-bottom: 1.1111111111111112rem;}#content-136 #content_buqx3k8bb .is-content {}}@media screen and (max-width: 543.9px) { #content-136 #content_dikgkqr71 {margin-bottom: 1.1111111111111112rem;}#content-136 #content_dikgkqr71 .is-content {}}#content-136 #section_l82s0ez0u .container {height: 20.555555555555557rem;}#content-136 #section_l82s0ez0u {margin-top: 1.1111111111111112rem;}#content-136 #content_7ksrgs6le {margin-top: 0rem;}#content-136 #content_7ksrgs6le .is-content {}@media screen and (max-width: 543.9px) { #content-136 #content_7ksrgs6le {margin-bottom: 1.1111111111111112rem;}#content-136 #content_7ksrgs6le .is-content {}}#content-136 #section_8y4a41ho2 {margin-top: 1.1111111111111112rem;}@media screen and (max-width: 543.9px) { #content-136 #content_4z1ewjqzc {margin-bottom: 1.1111111111111112rem;}#content-136 #content_4z1ewjqzc .is-content {}}#content-136 #section_khqwxrdun {margin-top: 1.1111111111111112rem;}@media screen and (max-width: 543.9px) { #content-136 #content_aosr9m8pm {margin-bottom: 1.1111111111111112rem;}#content-136 #content_aosr9m8pm .is-content {}}@media screen and (max-width: 543.9px) { #content-136 #content_m1duvx8vk {margin-bottom: 1.1111111111111112rem;}#content-136 #content_m1duvx8vk .is-content {}}#content-136 #content_230nuenli .spacer { background-color: #000000; }#content-136 #content_230nuenli .spacer { height: 2.7777777777777777rem; }#content-136 .transition-wrap {background-color: #020202;}
+			.nav_95vkr1s63 { background-color: rgba(23, 27, 26, 0);; }.nav_95vkr1s63 { height: 3.888888888888889rem; }.is-frontend #content-136 .sections { margin-top: 3.888888888888889rem; }.nav_95vkr1s63 { padding-top: 0rem; }.nav_95vkr1s63 { padding-bottom: 0rem; }.nav_95vkr1s63 .navbar-inner .logo { margin-top: 0rem; }.nav_95vkr1s63 .logo img, .nav_95vkr1s63 .logo svg { width: 0.8333333333333334rem; }.nav_95vkr1s63 .navbar-inner .logo { align-items: center; }.nav_95vkr1s63 .navbar-inner .hamburger { align-items: center; }.nav_95vkr1s63 .navbar-inner .hamburger a.menu-icon span { background-color: #ffffff; }.nav_95vkr1s63 .navbar-inner .hamburger a.menu-icon { width: 1.1111111111111112rem; }.nav_95vkr1s63 .navbar-inner .hamburger a.menu-icon span { height: 1px; }.nav_95vkr1s63 .navbar-inner .hamburger a.open-menu span::before { transform: translateY(-6px); }.nav_95vkr1s63 .navbar-inner .hamburger a.open-menu span::after { transform: translateY(6px); }.nav_95vkr1s63 .navbar-inner .hamburger a.open-menu:hover span::before { transform: translateY(-8px); }.nav_95vkr1s63 .navbar-inner .hamburger a.open-menu:hover span::after { transform: translateY(8px); }.nav_95vkr1s63 .navbar-inner .hamburger a.menu-icon { height: 13px; }.nav_95vkr1s63 .navbar-inner .hamburger a.menu-icon span { margin-top: 6.5px; }.nav_95vkr1s63 .navbar-inner nav ul li a span { font-size: 0.7222222222222222rem; }.nav_95vkr1s63 .navbar-inner nav ul li a span { color: #ffffff; }.nav_95vkr1s63 .navbar-inner nav ul li a { padding-left: 0.833333333333rem; }.nav_95vkr1s63 .navbar-inner nav ul li a { padding-right: 0.833333333333rem; }.nav_95vkr1s63 .navbar-inner nav ul li a span { text-transform: none; }.nav_95vkr1s63 .navbar-inner nav ul li a span { letter-spacing: 0rem; }.nav_95vkr1s63 .navbar-inner nav ul li a span { border-bottom-width: 0rem; }.nav_95vkr1s63 .navbar-inner nav ul li a span { border-bottom-color: #ffffff; }.nav_95vkr1s63 .navbar-inner nav.standard ul { align-items: center; }.nav_95vkr1s63 .navbar-inner nav ul li a:hover span, .navbar-inner nav ul li.current-menu-item a span, .navbar-inner nav ul li.current_page_item a span, .nav_95vkr1s63 .navbar-inner nav ul li.wrap-focus a span { color: #ffffff; }.nav_95vkr1s63 .navbar-inner nav ul li.current-menu-item a span { color: #ffffff; }.nav_95vkr1s63 .navbar-inner nav ul li.current_page_item a span { color: #ffffff; }[data-post-type="project"] .navbar-inner nav ul li.portfolio-grid a span, [data-post-type="post"] .navbar-inner nav ul li.blog-overview a span { color: #ffffff; }#overlay-menu { background-color: rgba(0, 0, 0, 1); }#overlay-menu .overlay-menu-inner nav { text-align: center; }#overlay-menu .overlay-menu-inner nav ul li a span { font-size: 2.7777777777777777rem; }#overlay-menu .overlay-menu-inner nav ul li a span { color: #ffffff; }#overlay-menu .overlay-menu-inner nav ul li a { padding-top: 1.38888888889rem; }#overlay-menu .overlay-menu-inner nav ul li a { padding-bottom: 1.38888888889rem; }#overlay-menu .overlay-menu-inner nav ul li a span { border-bottom-color: #ffffff; }#overlay-menu .overlay-menu-inner nav ul li a span { border-bottom-width: 0rem; }#overlay-menu .overlay-menu-inner nav ul li a span { padding-bottom: 0rem; }@media screen and (min-width: 992px) and (max-width: 1169.9px) { .nav_95vkr1s63 .navbar-inner .hamburger a.menu-icon { height: 13px; }.nav_95vkr1s63 .navbar-inner .hamburger a.menu-icon span { margin-top: 6.5px; }}@media screen and (min-width: 768px) and (max-width: 991.9px) { .nav_95vkr1s63 .navbar-inner .hamburger a.menu-icon { height: 13px; }.nav_95vkr1s63 .navbar-inner .hamburger a.menu-icon span { margin-top: 6.5px; }}@media screen and (min-width: 544px) and (max-width: 767.9px) { .nav_95vkr1s63 .navbar-inner .hamburger a.menu-icon { height: 13px; }.nav_95vkr1s63 .navbar-inner .hamburger a.menu-icon span { margin-top: 6.5px; }}@media screen and (max-width: 543.9px) { .nav_95vkr1s63 .navbar-inner .hamburger a.menu-icon { height: 13px; }.nav_95vkr1s63 .navbar-inner .hamburger a.menu-icon span { margin-top: 6.5px; }#overlay-menu .overlay-menu-inner nav ul li a span { font-size: 1.1111111111111112rem; }#overlay-menu .overlay-menu-inner nav ul li a { padding-top: 0.833333333333rem; }#overlay-menu .overlay-menu-inner nav ul li a { padding-bottom: 0.833333333333rem; }}
+		</style><style>html{margin-top:0px!important;}#wpadminbar{top:auto!important;bottom:0;}</style><link rel="shortcut icon" type="image/png" href="https://julienlozingue.com/wp-content/uploads/2019/07/logo.png" sizes="32x32"></head><body class="project-template-default single single-project postid-136 is-frontend static-mode static-transitions mejs-semplice-ui" bgcolor="#000000" data-post-type="project" data-post-id="136">
+		<div id="content-holder" data-active-post="136">
+			
+						<header class="nav_95vkr1s63 semplice-navbar active-navbar sticky-nav  cover-transparent scroll-to-top" data-cover-transparent="enabled" data-bg-overlay-visibility="visible" data-mobile-fallback="enabled"><div class="container" data-nav="logo-left-menu-right">
+								<div class="navbar-inner menu-type-text" data-xl-width="12" data-navbar-type="container">
+									<div class="logo navbar-left"><a href="https://julienlozingue.com" title="Julien Lozingue">
+<svg width="25px" height="25px" viewbox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="01" transform="translate(-353.000000, -766.000000)" fill="#FF6666"><rect id="Rectangle-2" x="353" y="766" width="25" height="25" rx="12.5"></rect></g></g></svg></a></div>
+									<nav class="standard navbar-right" data-font="font_qkcpimpel"><ul class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-8"><a href="https://julienlozingue.com/"><span>INDEX</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11"><a href="/info"><span>INFO</span></a></li>
+</ul></nav><div class="hamburger navbar-right semplice-menu"><a class="open-menu menu-icon"><span></span></a></div>
+								</div>
+							</div>
+						</header><div id="overlay-menu">
+					<div class="overlay-menu-inner" data-xl-width="12">
+						<nav class="overlay-nav" data-justify="center" data-align="align-middle" data-font="font_n1irzbpl7"><ul class="container"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-8"><a href="https://julienlozingue.com/"><span>INDEX</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11"><a href="/info"><span>INFO</span></a></li>
+</ul></nav></div>
+				</div>
+			
+					
+			<div id="content-136" class="content-container active-content  hide-on-init">
+				<div class="transition-wrap">
+					<div class="sections">
+						
+					<section id="section_e3409183a" class="content-block" data-column-mode-sm="single" data-column-mode-xs="single" data-valign="bottom" data-layout="grid" data-gutter="yes" data-height="dynamic" data-justify="left"><div class="container">
+						<div id="row_75c8782bb" class="row"><div id="column_ec4ea40b4" class="column" data-xl-width="7">
+					<div class="content-wrapper">
+						
+				<div id="content_27a148cb1" class="column-content" data-module="paragraph">
+					<div class="is-content has-xs"><div data-content-for="xl"><p style="font-size: 2.77778rem; line-height: 2.77778rem; text-align: justify;" data-mce-style="font-size: 2.77778rem; line-height: 2.77778rem; text-align: justify;"><span class="font_n1irzbpl7">HAVING FUN WITH PHOTOSHOP, AFTER EFFECTS & CINEMA 4D DURING MY SPARE TIME TO CREATE VISUAL EXPERIMENTS AND LEARN NEW SKILLS.</span></p></div><div data-content-for="xs"><p style="font-size: 1.66667rem; line-height: 1.66667rem; text-align: justify;" data-mce-style="font-size: 1.66667rem; line-height: 1.66667rem; text-align: justify;"><span class="font_n1irzbpl7">HAVING FUN WITH PHOTOSHOP, AFTER EFFECTS & CINEMA 4D DURING MY SPARE TIME TO CREATE VISUAL EXPERIMENTS AND LEARN NEW SKILLS.</span></p></div></div>
+				</div>
+			
+					</div>
+				</div><div id="column_33f60b38e" class="column" data-xl-width="5">
+					<div class="content-wrapper">
+						
+				<div id="content_c250c3355" class="column-content" data-module="paragraph">
+					<div class="is-content has-xs"><div data-content-for="xl"><p style="font-size: 0.777778rem; text-align: right; line-height: 1.33333rem;" data-mce-style="font-size: 0.777778rem; text-align: right; line-height: 1.33333rem;"><span class="font_n1irzbpl7" style="color: rgb(255, 255, 255);" data-mce-style="color: #ffffff;"><a data-mce-href="https://vimeo.com/user90026516" href="https://vimeo.com/user90026516" target="_blank" rel="noopener">/ See more projects on my Vimeo</a><br><a data-mce-href="https://dribbble.com/julienwz" href="https://dribbble.com/julienwz" target="_blank" rel="noopener">/ See more on my Dribbble</a><br><a data-mce-href="https://www.behance.net/Julienlozingue" href="https://www.behance.net/Julienlozingue" target="_blank" rel="noopener" data-mce-selected="1">/ See more on my Behance</a></span></p></div><div data-content-for="xs"><p style="font-size: 0.777778rem; text-align: right; line-height: 1.33333rem;" data-mce-style="font-size: 0.777778rem; text-align: right; line-height: 1.33333rem;"><span class="font_n1irzbpl7" style="color: rgb(255, 255, 255);" data-mce-style="color: #ffffff;"><a data-mce-href="https://vimeo.com/user90026516" href="https://vimeo.com/user90026516" target="_blank" rel="noopener" data-mce-selected="1">/ See more projects on my Vimeo</a><br><a data-mce-href="https://dribbble.com/julienwz" href="https://dribbble.com/julienwz" target="_blank" rel="noopener">/ See more on my Dribbble</a><br><a data-mce-href="https://www.behance.net/Julienlozingue" href="https://www.behance.net/Julienlozingue" target="_blank" rel="noopener">/ See more on my Behance</a></span></p></div></div>
+				</div>
+			
+					</div>
+				</div></div>
+						</div>
+					</section><section id="section_z3n0gguwd" class="content-block" data-column-mode-sm="single" data-column-mode-xs="single"><div class="container">
+						<div id="row_wt7std059" class="row"><div id="column_op608elug" class="column" data-xl-width="3">
+					<div class="content-wrapper">
+						
+				<div id="content_v6lrfjehf" class="column-content" data-module="image">
+					<div class="ce-image" data-align="left"><img class="is-content" src="https://julienlozingue.com/wp-content/uploads/2019/08/Dream.jpg" width="1080" height="1350" alt="Dream" caption="" data-width="original" data-scaling="no"></div>
+				</div>
+			
+					</div>
+				</div><div id="column_p2p676sgx" class="column" data-xl-width="3">
+					<div class="content-wrapper">
+						
+				<div id="content_nfziza8ch" class="column-content" data-module="image">
+					<div class="ce-image" data-align="left"><img class="is-content" src="https://julienlozingue.com/wp-content/uploads/2019/08/Test.jpg" width="1080" height="1350" alt="Test" caption="" data-width="original" data-scaling="no"></div>
+				</div>
+			
+					</div>
+				</div><div id="column_76ss784a2" class="column" data-xl-width="3">
+					<div class="content-wrapper">
+						
+				<div id="content_qybf9u3s1" class="column-content" data-module="image">
+					<div class="ce-image" data-align="left"><img class="is-content" src="https://julienlozingue.com/wp-content/uploads/2019/08/test2.jpg" width="864" height="1080" alt="test2" caption="" data-width="grid-width" data-scaling="no"></div>
+				</div>
+			
+					</div>
+				</div><div id="column_8f9e2iza1" class="column" data-xl-width="3">
+					<div class="content-wrapper">
+						
+				<div id="content_34s3six6z" class="column-content" data-module="image">
+					<div class="ce-image" data-align="left"><img class="is-content" src="https://julienlozingue.com/wp-content/uploads/2019/08/Attractor.jpg" width="1080" height="1350" alt="Attractor" caption="" data-width="original" data-scaling="no"></div>
+				</div>
+			
+					</div>
+				</div></div>
+						</div>
+					</section><section id="section_y1nz0u5mh" class="content-block" data-column-mode-sm="single" data-column-mode-xs="single"><div class="container">
+						<div id="row_a2h3dp5j0" class="row"><div id="column_qxd1gtbhd" class="column" data-xl-width="6">
+					<div class="content-wrapper">
+						
+				<div id="content_psw720fbd" class="column-content" data-module="image">
+					<div class="ce-image" data-align="left"><img class="is-content" src="https://julienlozingue.com/wp-content/uploads/2019/08/Waves.jpg" width="1280" height="720" alt="Waves" caption="" data-width="original" data-scaling="no"></div>
+				</div>
+			
+					</div>
+				</div><div id="column_0ke0gfbnb" class="column" data-xl-width="6">
+					<div class="content-wrapper">
+						
+				<div id="content_tze6mdovs" class="column-content" data-module="image">
+					<div class="ce-image" data-align="left"><img class="is-content" src="https://julienlozingue.com/wp-content/uploads/2019/08/Tesseract_04.jpg" width="1920" height="1080" alt="Tesseract_04" caption="" data-width="original" data-scaling="no"></div>
+				</div>
+			
+					</div>
+				</div></div>
+						</div>
+					</section><section id="section_fl7yyepla" class="content-block" data-column-mode-sm="single" data-column-mode-xs="single"><div class="container">
+						<div id="row_2xa9caoxc" class="row"><div id="column_i45hv6c1g" class="column" data-xl-width="3">
+					<div class="content-wrapper">
+						
+				<div id="content_pkdnyyypi" class="column-content" data-module="image">
+					<div class="ce-image" data-align="left"><img class="is-content" src="https://julienlozingue.com/wp-content/uploads/2019/08/Attractor6.jpg" width="1080" height="1350" alt="Attractor6" caption="" data-width="grid-width" data-scaling="no"></div>
+				</div>
+			
+					</div>
+				</div><div id="column_eyowm0s0w" class="column" data-xl-width="3">
+					<div class="content-wrapper">
+						
+				<div id="content_pa3kucnu0" class="column-content" data-module="image">
+					<div class="ce-image" data-align="left"><img class="is-content" src="https://julienlozingue.com/wp-content/uploads/2019/08/Attractor7.jpg" width="1080" height="1350" alt="Attractor7" caption="" data-width="grid-width" data-scaling="no"></div>
+				</div>
+			
+					</div>
+				</div><div id="column_xki49uaw4" class="column" data-xl-width="3">
+					<div class="content-wrapper">
+						
+				<div id="content_v3720eg00" class="column-content" data-module="image">
+					<div class="ce-image" data-align="left"><img class="is-content" src="https://julienlozingue.com/wp-content/uploads/2019/08/Attractor8.jpg" width="1080" height="1350" alt="Attractor8" caption="" data-width="original" data-scaling="no"></div>
+				</div>
+			
+					</div>
+				</div><div id="column_jokr7fuof" class="column" data-xl-width="3">
+					<div class="content-wrapper">
+						
+				<div id="content_qz705xdea" class="column-content" data-module="image">
+					<div class="ce-image" data-align="left"><img class="is-content" src="https://julienlozingue.com/wp-content/uploads/2019/08/Attractor9.jpg" width="1080" height="1350" alt="Attractor9" caption="" data-width="original" data-scaling="no"></div>
+				</div>
+			
+					</div>
+				</div></div>
+						</div>
+					</section><section id="section_a1njnyx6i" class="content-block" data-column-mode-sm="single" data-column-mode-xs="single" data-justify="left"><div class="container">
+						<div id="row_i7zotr7rt" class="row"><div id="column_wnxccvylc" class="column" data-xl-width="4">
+					<div class="content-wrapper">
+						
+				<div id="content_m4n4ppzid" class="column-content" data-module="image">
+					<div class="ce-image" data-align="left"><img class="is-content" src="https://julienlozingue.com/wp-content/uploads/2019/08/Twist_SoftLight.jpg" width="1080" height="1350" alt="Twist_SoftLight" caption="" data-width="grid-width" data-scaling="no"></div>
+				</div>
+			
+					</div>
+				</div><div id="column_x13pevjia" class="column" data-xl-width="4">
+					<div class="content-wrapper">
+						
+				<div id="content_nsak5ntuu" class="column-content" data-module="image">
+					<div class="ce-image" data-align="left"><img class="is-content" src="https://julienlozingue.com/wp-content/uploads/2019/08/Cover-2.jpg" width="1019" height="1019" alt="Cover" caption="" data-width="original" data-scaling="no"></div>
+				</div>
+			
+					</div>
+				</div><div id="column_26gce2pya" class="column" data-xl-width="4">
+					<div class="content-wrapper">
+						
+				<div id="content_pir7if8d3" class="column-content" data-module="image">
+					<div class="ce-image" data-align="left"><img class="is-content" src="https://julienlozingue.com/wp-content/uploads/2019/08/Tesseract30.jpg" width="1080" height="1350" alt="Tesseract30" caption="" data-width="original" data-scaling="no"></div>
+				</div>
+			
+					</div>
+				</div></div>
+						</div>
+					</section><section id="section_8irkqk2wg" class="content-block" data-column-mode-sm="single" data-column-mode-xs="single" data-valign="stretch" data-gutter="yes" data-layout="grid" data-justify="left"><div class="container">
+						<div id="row_0hrywjguj" class="row"><div id="column_b8cp4m2sj" class="column" data-xl-width="6" data-valign="top">
+					<div class="content-wrapper">
+						
+				<div id="content_d7uiyg5y4" class="column-content" data-module="image">
+					<div class="ce-image" data-align="left"><img class="is-content" src="https://julienlozingue.com/wp-content/uploads/2019/08/Duo.jpg" width="1920" height="1080" alt="Duo" caption="" data-width="grid-width" data-scaling="no"></div>
+				</div>
+			
+					</div>
+				</div><div id="column_ujgdn8lyf" class="column" data-xl-width="6" data-valign="top">
+					<div class="content-wrapper">
+						
+				<div id="content_npawlutjl" class="column-content" data-module="image">
+					<div class="ce-image" data-align="left"><img class="is-content" src="https://julienlozingue.com/wp-content/uploads/2019/08/Final.jpg" width="1920" height="1080" alt="Final" caption="" data-width="grid-width" data-scaling="no"></div>
+				</div>
+			
+					</div>
+				</div></div>
+						</div>
+					</section><section id="section_luncqbe5u" class="content-block" data-column-mode-sm="single" data-column-mode-xs="single" data-justify="space-between"><div class="container">
+						<div id="row_ie3vxxu9u" class="row"><div id="column_0x7zdvm6q" class="column" data-xl-width="4">
+					<div class="content-wrapper">
+						
+				<div id="content_wqky92022" class="column-content" data-module="image">
+					<div class="ce-image" data-align="left"><img class="is-content" src="https://julienlozingue.com/wp-content/uploads/2019/08/Flow45.jpg" width="1080" height="1080" alt="Flow45" caption="" data-width="grid-width" data-scaling="no"></div>
+				</div>
+			
+					</div>
+				</div><div id="column_d66y8i8gm" class="column" data-xl-width="7">
+					<div class="content-wrapper">
+						
+				<div id="content_6t5wpomey" class="column-content" data-module="image">
+					<div class="ce-image" data-align="left"><img class="is-content" src="https://julienlozingue.com/wp-content/uploads/2019/08/Flow44.jpg" width="1920" height="1080" alt="Flow44" caption="" data-width="grid-width" data-scaling="no"></div>
+				</div>
+			
+					</div>
+				</div></div>
+						</div>
+					</section><section id="section_40y5hl0fj" class="content-block" data-column-mode-sm="single" data-column-mode-xs="single"><div class="container">
+						<div id="row_w4qoc0k8y" class="row"><div id="column_6n6y7cbe0" class="column" data-xl-width="6">
+					<div class="content-wrapper">
+						
+				<div id="content_zcww3ativ" class="column-content" data-module="video">
+					
+				<div class="ce-video" data-hide-controls="on" data-transparent-controls="on" style="width: 100%; max-width: 100%">
+					<video class="video is-content" webkit-playsinline playsinline preload="none" loop autoplay muted><source src="https://julienlozingue.com/wp-content/uploads/2019/08/Bubble-Noise-Glow-2.mp4" type="video/mp4"><p>If you are reading this, it is because your browser does not support the HTML5 video element.</p>
+					</source></video></div>
+			
+				</div>
+			
+					</div>
+				</div><div id="column_8zagj1m3c" class="column" data-xl-width="6">
+					<div class="content-wrapper">
+						
+				<div id="content_en9jrug1k" class="column-content" data-module="video">
+					
+				<div class="ce-video" data-hide-controls="on" data-transparent-controls="on" style="width: 100%; max-width: 100%">
+					<video class="video is-content" webkit-playsinline playsinline preload="none" loop autoplay muted><source src="https://julienlozingue.com/wp-content/uploads/2019/08/TAO-NDA.mp4" type="video/mp4"><p>If you are reading this, it is because your browser does not support the HTML5 video element.</p>
+					</source></video></div>
+			
+				</div>
+			
+					</div>
+				</div></div>
+						</div>
+					</section><section id="section_qh4qnpr0j" class="content-block" data-column-mode-sm="single" data-column-mode-xs="single"><div class="container">
+						<div id="row_he2p7630y" class="row"><div id="column_7sncaciyx" class="column" data-xl-width="4">
+					<div class="content-wrapper">
+						
+				<div id="content_od8ojr98l" class="column-content" data-module="image">
+					<div class="ce-image" data-align="left"><img class="is-content" src="https://julienlozingue.com/wp-content/uploads/2019/08/NoiseDisplacement8.jpg" width="1280" height="720" alt="NoiseDisplacement8" caption="" data-width="original" data-scaling="no"></div>
+				</div>
+			
+					</div>
+				</div><div id="column_9dpmmzfvh" class="column" data-xl-width="4">
+					<div class="content-wrapper">
+						
+				<div id="content_yynom51l5" class="column-content" data-module="video">
+					
+				<div class="ce-video" data-hide-controls="on" data-transparent-controls="on" style="width: 100%; max-width: 100%">
+					<video class="video is-content" webkit-playsinline playsinline preload="none" loop autoplay muted><source src="https://julienlozingue.com/wp-content/uploads/2019/08/Comp1-2.mp4" type="video/mp4"><p>If you are reading this, it is because your browser does not support the HTML5 video element.</p>
+					</source></video></div>
+			
+				</div>
+			
+					</div>
+				</div><div id="column_qnm9ivsen" class="column" data-xl-width="4">
+					<div class="content-wrapper">
+						
+				<div id="content_nrux7ys5z" class="column-content" data-module="image">
+					<div class="ce-image" data-align="left"><img class="is-content" src="https://julienlozingue.com/wp-content/uploads/2019/08/NoiseDisplacement11.jpg" width="1280" height="720" alt="NoiseDisplacement11" caption="" data-width="original" data-scaling="no"></div>
+				</div>
+			
+					</div>
+				</div></div>
+						</div>
+					</section><section id="section_h04bn3gn2" class="content-block" data-column-mode-sm="single" data-column-mode-xs="single"><div class="container">
+						<div id="row_drkycnu4e" class="row"><div id="column_bhl7xkxy0" class="column" data-xl-width="6">
+					<div class="content-wrapper">
+						
+				<div id="content_e2stlyboy" class="column-content" data-module="image">
+					<div class="ce-image" data-align="left"><img class="is-content" src="https://julienlozingue.com/wp-content/uploads/2019/08/Bowldqqdq.jpg" width="1280" height="720" alt="Bowldqqdq" caption="" data-width="original" data-scaling="no"></div>
+				</div>
+			
+					</div>
+				</div><div id="column_skr36gknu" class="column" data-xl-width="6">
+					<div class="content-wrapper">
+						
+				<div id="content_5xyf0n3ze" class="column-content" data-module="image">
+					<div class="ce-image" data-align="left"><img class="is-content" src="https://julienlozingue.com/wp-content/uploads/2019/08/Test01.jpg" width="1280" height="720" alt="Test01" caption="" data-width="original" data-scaling="no"></div>
+				</div>
+			
+					</div>
+				</div></div>
+						</div>
+					</section><section id="section_9jymfav9v" class="content-block" data-column-mode-sm="single" data-column-mode-xs="single"><div class="container">
+						<div id="row_6j8mk7f7t" class="row"><div id="column_ynj4h1txg" class="column" data-xl-width="6">
+					<div class="content-wrapper">
+						
+				<div id="content_buqx3k8bb" class="column-content" data-module="image">
+					<div class="ce-image" data-align="left"><img class="is-content" src="https://julienlozingue.com/wp-content/uploads/2019/08/te.jpg" width="1280" height="800" alt="te" caption="" data-width="original" data-scaling="no"></div>
+				</div>
+			
+					</div>
+				</div><div id="column_02cm5m0bv" class="column" data-xl-width="6">
+					<div class="content-wrapper">
+						
+				<div id="content_dikgkqr71" class="column-content" data-module="image">
+					<div class="ce-image" data-align="left"><img class="is-content" src="https://julienlozingue.com/wp-content/uploads/2019/08/fzefzefjij.jpg" width="1280" height="800" alt="fzefzefjij" caption="" data-width="original" data-scaling="no"></div>
+				</div>
+			
+					</div>
+				</div></div>
+						</div>
+					</section><section id="section_l82s0ez0u" class="content-block" data-column-mode-sm="single" data-column-mode-xs="single" data-height="custom"><div class="container">
+						<div id="row_1cpwk3v0s" class="row"><div id="column_3jcysmuog" class="column" data-xl-width="6">
+					<div class="content-wrapper">
+						
+				<div id="content_7ksrgs6le" class="column-content" data-module="image">
+					<div class="ce-image" data-align="left"><img class="is-content" src="https://julienlozingue.com/wp-content/uploads/2019/08/Blob1_Editeur_b.jpg" width="1280" height="720" alt="Blob1_Editeur_b" caption="" data-width="original" data-scaling="no"></div>
+				</div>
+			
+					</div>
+				</div><div id="column_oxy3o8ian" class="column" data-xl-width="6">
+					<div class="content-wrapper">
+						
+				<div id="content_1avur3mb4" class="column-content" data-module="image">
+					<div class="ce-image" data-align="left"><img class="is-content" src="https://julienlozingue.com/wp-content/uploads/2019/08/gege.jpg" width="1280" height="800" alt="gege" caption="" data-width="original" data-scaling="no"></div>
+				</div>
+			
+					</div>
+				</div></div>
+						</div>
+					</section><section id="section_8y4a41ho2" class="content-block" data-column-mode-sm="single" data-column-mode-xs="single"><div class="container">
+						<div id="row_lkz1uij8j" class="row"><div id="column_w19eiglw0" class="column" data-xl-width="6">
+					<div class="content-wrapper">
+						
+				<div id="content_4z1ewjqzc" class="column-content" data-module="image">
+					<div class="ce-image" data-align="left"><img class="is-content" src="https://julienlozingue.com/wp-content/uploads/2019/08/Cloth.jpg" width="1920" height="1080" alt="Cloth" caption="" data-width="original" data-scaling="no"></div>
+				</div>
+			
+					</div>
+				</div><div id="column_5yovt0bhx" class="column" data-xl-width="6">
+					<div class="content-wrapper">
+						
+				<div id="content_0yxzch8b0" class="column-content" data-module="image">
+					<div class="ce-image" data-align="left"><img class="is-content" src="https://julienlozingue.com/wp-content/uploads/2019/08/NoiseDisplacement7.jpg" width="1280" height="720" alt="NoiseDisplacement7" caption="" data-width="original" data-scaling="no"></div>
+				</div>
+			
+					</div>
+				</div></div>
+						</div>
+					</section><section id="section_khqwxrdun" class="content-block" data-column-mode-sm="single" data-column-mode-xs="single" data-justify="center" data-gutter="yes" data-layout="grid" data-height="dynamic"><div class="container">
+						<div id="row_5prmso1yk" class="row"><div id="column_wi4asjs6s" class="column" data-xl-width="4">
+					<div class="content-wrapper">
+						
+				<div id="content_aosr9m8pm" class="column-content" data-module="video">
+					
+				<div class="ce-video" data-hide-controls="on" data-transparent-controls="on" style="width: 100%; max-width: 100%">
+					<video class="video is-content" webkit-playsinline playsinline preload="none" loop autoplay muted><source src="https://julienlozingue.com/wp-content/uploads/2019/08/DarkJapan2.mp4" type="video/mp4"><p>If you are reading this, it is because your browser does not support the HTML5 video element.</p>
+					</source></video></div>
+			
+				</div>
+			
+					</div>
+				</div><div id="column_hyq77xm9k" class="column" data-xl-width="4">
+					<div class="content-wrapper">
+						
+				<div id="content_m1duvx8vk" class="column-content" data-module="video">
+					
+				<div class="ce-video" data-hide-controls="on" data-transparent-controls="on" style="width: 100%; max-width: 100%">
+					<video class="video is-content" webkit-playsinline playsinline preload="none" loop autoplay muted><source src="https://julienlozingue.com/wp-content/uploads/2019/08/002.mp4" type="video/mp4"><p>If you are reading this, it is because your browser does not support the HTML5 video element.</p>
+					</source></video></div>
+			
+				</div>
+			
+					</div>
+				</div><div id="column_wk9p0wfwm" class="column" data-xl-width="4">
+					<div class="content-wrapper">
+						
+				<div id="content_8nukso54l" class="column-content" data-module="video">
+					
+				<div class="ce-video" data-hide-controls="on" data-transparent-controls="on" style="width: 100%; max-width: 100%">
+					<video class="video is-content" webkit-playsinline playsinline preload="none" loop autoplay muted><source src="https://julienlozingue.com/wp-content/uploads/2019/08/007.mp4" type="video/mp4"><p>If you are reading this, it is because your browser does not support the HTML5 video element.</p>
+					</source></video></div>
+			
+				</div>
+			
+					</div>
+				</div></div>
+						</div>
+					</section><section id="section_qxsj4bjjf" class="content-block" data-column-mode-sm="single" data-column-mode-xs="single"><div class="container">
+						<div id="row_t6m4fm6hj" class="row"><div id="column_6z5f5y1h3" class="column" data-xl-width="12">
+					<div class="content-wrapper">
+						
+				<div id="content_230nuenli" class="column-content" data-module="spacer">
+					
+				<div class="spacer-container">
+					<div class="is-content">
+						<div class="spacer"></div>
+					</div>
+				</div>
+			
+				</div>
+			
+					</div>
+				</div></div>
+						</div>
+					</section></div>
+				</div>
+			</div>
+		</div>
+		<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="pswp__bg"></div>
+	<div class="pswp__scroll-wrap">
+		<div class="pswp__container">
+			<div class="pswp__item"></div>
+			<div class="pswp__item"></div>
+			<div class="pswp__item"></div>
+		</div>
+		<div class="pswp__ui pswp__ui--hidden">
+			<div class="pswp__top-bar">
+				<div class="pswp__counter"></div>
+				<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+				<button class="pswp__button pswp__button--share" title="Share"></button>
+				<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+				<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+				<div class="pswp__preloader">
+					<div class="pswp__preloader__icn">
+					  <div class="pswp__preloader__cut">
+						<div class="pswp__preloader__donut"></div>
+					  </div>
+					</div>
+				</div>
+			</div>
+			<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+				<div class="pswp__share-tooltip"></div> 
+			</div>
+			<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+			</button>
+			<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+			</button>
+			<div class="pswp__caption">
+				<div class="pswp__caption__center"></div>
+			</div>
+		</div>
+	</div>
+</div>	<div class="back-to-top">
+		<a class="semplice-event" data-event-type="helper" data-event="scrollToTop"><svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="53px" height="20px" viewbox="0 0 53 20" enable-background="new 0 0 53 20" xml:space="preserve"><g id="Ebene_3"></g><g><polygon points="43.886,16.221 42.697,17.687 26.5,4.731 10.303,17.688 9.114,16.221 26.5,2.312 	"></polygon></g></svg></a>
+	</div>
+	<script type="text/javascript">
+/* <![CDATA[ */
+var semplice = {"default_api_url":"https:\/\/julienlozingue.com\/wp-json","semplice_api_url":"https:\/\/julienlozingue.com\/wp-json\/semplice\/v1\/frontend","template_dir":"https:\/\/julienlozingue.com\/wp-content\/themes\/theme_repo\/julienwz.github.io","category_base":"\/category\/","tag_base":"\/tag\/","nonce":"ed2bb7c209","frontend_mode":"static","static_transitions":"enabled","site_name":"Julien Lozingue","base_url":"https:\/\/PLACEHOLDER.wpsho","frontpage_id":"5","blog_home":"https:\/\/PLACEHOLDER.wpsho","blog_navbar":"","sr_status":"disabled","blog_sr_status":"enabled","is_preview":"","password_form":"\r\n<div class=\"post-password-form\">\r\n\t<div class=\"inner\">\r\n\t\t<form action=\"https:\/\/julienlozingue.com\/wp-login.php?action=postpass\" method=\"post\">\r\n\t\t\t<div class=\"password-lock\"><svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"35\" height=\"52\" viewBox=\"0 0 35 52\">\r\n  <path id=\"Form_1\" data-name=\"Form 1\" d=\"M31.3,25.028H27.056a0.755,0.755,0,0,1-.752-0.757V14.654a8.8,8.8,0,1,0-17.608,0v9.616a0.755,0.755,0,0,1-.752.757H3.7a0.755,0.755,0,0,1-.752-0.757V14.654a14.556,14.556,0,1,1,29.111,0v9.616A0.755,0.755,0,0,1,31.3,25.028Zm-3.495-1.514h2.743V14.654a13.051,13.051,0,1,0-26.1,0v8.859H7.192V14.654a10.309,10.309,0,1,1,20.617,0v8.859Zm4.43,28.475H2.761A2.77,2.77,0,0,1,0,49.213V25.28a1.763,1.763,0,0,1,1.755-1.766H33.242A1.763,1.763,0,0,1,35,25.28V49.213A2.77,2.77,0,0,1,32.239,51.988ZM1.758,25.028a0.252,0.252,0,0,0-.251.252V49.213a1.259,1.259,0,0,0,1.254,1.262H32.239a1.259,1.259,0,0,0,1.254-1.262V25.28a0.252,0.252,0,0,0-.251-0.252H1.758ZM20.849,43h-6.7a0.75,0.75,0,0,1-.61-0.314,0.763,0.763,0,0,1-.1-0.682l1.471-4.44a4.1,4.1,0,1,1,5.184,0L21.563,42a0.763,0.763,0,0,1-.1.682A0.75,0.75,0,0,1,20.849,43ZM15.2,41.487H19.8l-1.319-3.979a0.76,0.76,0,0,1,.33-0.891,2.6,2.6,0,1,0-2.633,0,0.76,0.76,0,0,1,.33.891Z\"\/>\r\n<\/svg>\r\n<\/div>\r\n\t\t\t<p>This content is protected. <br \/><span>To view, please enter the password.<\/span><\/p>\r\n\t\t\t<div class=\"input-fields\">\r\n\t\t\t\t<input name=\"post_password\" class=\"post-password-input\" type=\"password\" size=\"20\" maxlength=\"20\" placeholder=\"Enter password\" \/><input type=\"submit\" name=\"Submit\" value=\"Submit\" \/>\t\t\t<\/div>\r\n\t\t<\/form>\r\n\t<\/div>\r\n<\/div>\r\n\r\n","portfolio_order":[17,136,15,13,19,113],"gallery":{"prev":"<svg version=\"1.1\" id=\"Ebene_1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\" x=\"0px\" y=\"0px\"\n\twidth=\"18px\" height=\"40px\"  viewBox=\"0 0 18 40\" enable-background=\"new 0 0 18 40\" xml:space=\"preserve\">\n<g id=\"Ebene_2\">\n\t<g>\n\t\t<polygon points=\"16.3,40 0.3,20 16.3,0 17.7,1 2.5,20 17.7,39 \t\t\"\/>\n\t<\/g>\n<\/g>\n<\/svg>\n","next":"<svg version=\"1.1\" id=\"Ebene_1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\" x=\"0px\" y=\"0px\"\n\twidth=\"18px\" height=\"40px\" viewBox=\"0 0 18 40\" enable-background=\"new 0 0 18 40\" xml:space=\"preserve\">\n<g id=\"Ebene_2\">\n\t<g>\n\t\t<polygon points=\"0.3,39 15.5,20 0.3,1 1.7,0 17.7,20 1.7,40 \t\t\"\/>\n\t<\/g>\n<\/g>\n<\/svg>\n"}};
+/* ]]> */
+</script><script type="text/javascript" src="https://julienlozingue.com/wp-content/themes/theme_repo/julienwz.github.io/assets/js/frontend.min.js"></script><script type="text/javascript" id="136-motion-js">
+					(function ($) { "use strict";$(window).on("scroll", function() { }); $(window).scroll();})(jQuery);
+				</script></body></html>
