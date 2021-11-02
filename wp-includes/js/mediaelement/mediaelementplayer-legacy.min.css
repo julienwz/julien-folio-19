@@ -81,10 +81,10 @@
 .mejs-captions-button>.mejs-captions-selector, .mejs-chapters-button>.mejs-chapters-selector {background: rgba(50,50,50,.7);border: 1px solid transparent;border-radius: 0;bottom: 100%;margin-right: -43px;overflow: hidden;padding: 0;position: absolute;right: 50%;visibility: visible;width: 86px;}
 .mejs-chapters-button>.mejs-chapters-selector {margin-right: -55px;width: 110px;}
 .mejs-captions-selector-list, .mejs-chapters-selector-list {list-style-type: none !important;margin: 0;overflow: hidden;padding: 0;}
-.mejs-captions-selector-list-item, .mejs-chapters-selector-list-item {color: #fff;cursor: pointer;display: block;list-style-type: none !important;margin: 0 0 6px;overflow: hidden;padding: 0 10px;}
+.mejs-captions-selector-list-item, .mejs-chapters-selector-list-item {color: #fff;cursor: pointer;display: block;list-style-type: none !important;margin: 0 0 6px;overflow: hidden;padding: 0;}
 .mejs-captions-selector-list-item:hover, .mejs-chapters-selector-list-item:hover {background-color: #c8c8c8 !important;background-color: hsla(0,0%,100%,.4) !important;}
 .mejs-captions-selector-input, .mejs-chapters-selector-input {clear: both;float: left;left: -1000px;margin: 3px 3px 0 5px;position: absolute;}
-.mejs-captions-selector-label, .mejs-chapters-selector-label {cursor: pointer;float: left;font-size: 10px;line-height: 15px;padding: 4px 0 0;}
+.mejs-captions-selector-label, .mejs-chapters-selector-label {cursor: pointer;float: left;font-size: 10px;line-height: 15px;padding: 4px 10px 0;width: 100%;}
 .mejs-captions-selected, .mejs-chapters-selected {color: #21f8f8;}
 .mejs-captions-translations {font-size: 10px;margin: 0 0 5px;}
 .mejs-captions-layer {bottom: 0;color: #fff;font-size: 16px;left: 0;line-height: 20px;position: absolute;text-align: center;}
@@ -95,7 +95,7 @@
 .mejs-captions-text, .mejs-captions-text * {background: hsla(0,0%,8%,.5);box-shadow: 5px 0 0 hsla(0,0%,8%,.5),-5px 0 0 hsla(0,0%,8%,.5);padding: 0;white-space: pre-wrap;}
 .mejs-container.mejs-hide-cues video::-webkit-media-text-track-container {display: none;}
 .mejs-overlay-error {position: relative;}
-.mejs-overlay-error>img {left: 0;position: absolute;top: 0;z-index: -1;}
+.mejs-overlay-error>img {left: 0;max-width: 100%;position: absolute;top: 0;z-index: -1;}
 .mejs-cannotplay, .mejs-cannotplay a {color: #fff;font-size: .8em;}
 .mejs-cannotplay {position: relative;}
 .mejs-cannotplay a, .mejs-cannotplay p {display: inline-block;padding: 0 15px;width: 100%;}
